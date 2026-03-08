@@ -87,7 +87,7 @@ export default function Login() {
               <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-sky-500 transition-colors" size={18} />
               <input
                 type="password"
-                placeholder="Security Key"
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-2xl border border-white/5 bg-white/[0.03] py-4 pl-12 pr-4 text-sm focus:border-sky-500/50 focus:outline-none transition-all"
