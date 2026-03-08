@@ -10,13 +10,15 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-const corsOptions: cors.CorsOptions = {
-  origin: process.env.CLIENT_ORIGIN ?? "http://localhost:3000",
-  credentials: true,
-};
+const allowedOrigin =
+  process.env.CLIENT_ORIGIN || "http://localhost:3000";
 
-app.use(cors(corsOptions));
-app.options(/^\/api\/.*/, cors(corsOptions));
+app.use(
+  cors({
+    origin: allowedOrigin,
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser());
@@ -27,8 +29,9 @@ app.use("/api/brands", brandRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/", devRoutes);
+
 app.get("/health", (_req, res) => {
   res.status(200).json({ status: "Backend running" });
 });
 
-export default app;  
+export default app;
