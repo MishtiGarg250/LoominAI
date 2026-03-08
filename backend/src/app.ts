@@ -7,8 +7,19 @@ import postRoutes from "./routes/postRoutes.js";
 import devRoutes from "./routes/devRoutes.js";
 import notificationRoutes from "./routes/notificationRoutes.js";
 import cookieParser from "cookie-parser";
+import cron from "node-cron";
+import axios from "axios";
 
 const app = express();
+
+cron.schedule("*/10 * * * *", async () => {
+  try {
+    await axios.get(`${process.env.BACKEND_URL}/health`);
+    console.log("Self ping successful");
+  } catch (err) {
+    console.log("Self ping failed");
+  }
+});
 
 const allowedOrigin =
   process.env.CLIENT_ORIGIN || "http://localhost:3000";
