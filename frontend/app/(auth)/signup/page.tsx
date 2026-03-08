@@ -60,8 +60,8 @@ export default function SignUp() {
             <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">Loomin AI</span>
           </Link>
           <div className="space-y-4">
-            <h2 className="text-4xl font-serif font-light leading-[1.1] tracking-tight text-balance">
-              Deploy your <br /> <span className="text-sky-500">AI Workforce.</span>
+            <h2 className="text-4xl font-serif font-light leading-[1.1] tracking-tight">
+              Deploy your <br /> <span className="text-sky-500">AI workforce.</span>
             </h2>
             <p className="max-w-70 text-sm leading-relaxed text-gray-500">
               Join the network of brands using autonomous agents to dominate social reach.
@@ -136,7 +136,7 @@ export default function SignUp() {
             </button>
           </form>
 
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-600">
+          <p className="text-center text-[10px]  font-bold uppercase tracking-widest text-gray-600">
             Existing Identity?{" "}
             <Link href="/login" className="text-sky-500 hover:text-sky-400 transition-colors">
               Access Uplink
