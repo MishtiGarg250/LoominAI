@@ -26,9 +26,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.2.1",
     "node-cron": "^4.2.1",
-    "typescript": "^5.9.3"
-  },
-  "devDependencies": {
+    "typescript": "^5.9.3",
     "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
